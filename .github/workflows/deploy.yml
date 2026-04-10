@@ -86,13 +86,18 @@ jobs:
           # Update giscus repo
           sed -i 's|repo: .*|repo: ${{ github.repository }}|' _config.yml
           # Verify _config.yml is valid
+          echo "=== _config.yml (url and baseurl) ==="
           cat _config.yml | grep -E "^(url|baseurl):"
+          echo "=== Full _config.yml first 30 lines ==="
+          head -30 _config.yml
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+          echo "=== Checking generated HTML ==="
+          head -20 _site/index.html | grep -E "(bootstrap|baseurl)" || echo "No match found"
       # - name: Purge unused CSS 🧹
       #   run: |
       #     npm install -g purgecss
