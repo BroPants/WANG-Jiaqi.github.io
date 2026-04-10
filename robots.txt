@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://bropants.github.io/WANG-Jiaqi.github.io/sitemap.xml
+Sitemap: https://bropants.github.io/sitemap.xml
