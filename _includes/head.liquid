@@ -1,4 +1,4 @@
-<!-- Metadata, OpenGraph and Schema.org -->
+﻿<!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
 <!-- Security: Content Security Policy -->
@@ -10,7 +10,7 @@
 >
 
 <!-- Bootstrap & MDB -->
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css?v={{ site.time | date: '%s' }}">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css?v=v1">
 <link
   rel="stylesheet"
   href="{{ site.third_party_libraries.mdb.url.css }}"
@@ -30,8 +30,8 @@
 {% endif %}
 
 <!-- Fonts & Icons -->
-<link defer rel="stylesheet" href="{{ site.baseurl }}/assets/css/academicons.min.css?v={{ site.time | date: '%s' }}">
-<link defer rel="stylesheet" href="{{ site.baseurl }}/assets/css/scholar-icons.css?v={{ site.time | date: '%s' }}">
+<link defer rel="stylesheet" href="{{ site.baseurl }}/assets/css/academicons.min.css?v=v1">
+<link defer rel="stylesheet" href="{{ site.baseurl }}/assets/css/scholar-icons.css?v=v1">
 <link
   defer
   rel="stylesheet"
@@ -43,14 +43,14 @@
 <link
   defer
   rel="stylesheet"
-  href="{{ site.baseurl }}/assets/css/jekyll-pygments-themes-github.css?v={{ site.time | date: '%s' }}"
+  href="{{ site.baseurl }}/assets/css/jekyll-pygments-themes-github.css?v=v1"
   media=""
   id="highlight_theme_light"
 >
 
 {% if page.toc and page.toc.sidebar %}
   <!-- Sidebar Table of Contents -->
-  <link defer href="{{ site.baseurl }}/assets/css/bootstrap-toc.min.css?v={{ site.time | date: '%s' }}" rel="stylesheet">
+  <link defer href="{{ site.baseurl }}/assets/css/bootstrap-toc.min.css?v=v1" rel="stylesheet">
 {% endif %}
 
 <!-- Styles -->
@@ -72,18 +72,18 @@
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ site.icon }}</text></svg>"
   >
 {% elsif site.icon != blank %}
-  <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | prepend: site.baseurl }}?v={{ site.time | date: '%s' }}">
+  <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | prepend: site.baseurl }}?v=v1">
 {% endif %}
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css?v={{ site.time | date: '%s' }}">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css?v=v1">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->
-  <script src="{{ site.baseurl }}/assets/js/theme.js?v={{ site.time | date: '%s' }}"></script>
+  <script src="{{ site.baseurl }}/assets/js/theme.js?v=v1"></script>
   <link
     defer
     rel="stylesheet"
-    href="{{ site.baseurl }}/assets/css/jekyll-pygments-themes-native.css?v={{ site.time | date: '%s' }}"
+    href="{{ site.baseurl }}/assets/css/jekyll-pygments-themes-native.css?v=v1"
     media="none"
     id="highlight_theme_dark"
   >
@@ -193,7 +193,7 @@
 {% endif %}
 
 {% if page.tikzjax %}
-  <link defer rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/tikzjax.min.css?v={{ site.time | date: '%s' }}">
+  <link defer rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/tikzjax.min.css?v=v1">
 {% endif %}
 
 {% if site.enable_cookie_consent %}
