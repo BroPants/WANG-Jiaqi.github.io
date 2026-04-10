@@ -86,12 +86,11 @@ jobs:
         with:
           commitChange: false
           valueFile: "_config.yml"
-          propertyPath: "giscus.repo"
-          value: ${{ github.repository }}
-      - name: Setup baseurl ⚙️
-        run: |
-          sed -i 's|^baseurl:.*|baseurl: /WANG-Jiaqi.github.io|' _config.yml
-          cat _config.yml | grep baseurl
+          changes: |
+            {
+              "giscus.repo": "${{ github.repository }}",
+              "baseurl": "/WANG-Jiaqi.github.io"
+            }
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
