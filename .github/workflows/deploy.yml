@@ -88,12 +88,16 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Setup baseurl ⚙️
+        run: |
+          sed -i 's|^baseurl:.*|baseurl: /WANG-Jiaqi.github.io|' _config.yml
+          cat _config.yml | grep baseurl
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
-          bundle exec jekyll build --baseurl /WANG-Jiaqi.github.io
+          bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
