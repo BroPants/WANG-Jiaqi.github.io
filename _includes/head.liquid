@@ -10,7 +10,7 @@
 >
 
 <!-- Bootstrap & MDB -->
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css?v=v1">
+<link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}?v=v1">
 <link
   rel="stylesheet"
   href="{{ site.third_party_libraries.mdb.url.css }}"
@@ -30,8 +30,8 @@
 {% endif %}
 
 <!-- Fonts & Icons -->
-<link defer rel="stylesheet" href="{{ site.baseurl }}/assets/css/academicons.min.css?v=v1">
-<link defer rel="stylesheet" href="{{ site.baseurl }}/assets/css/scholar-icons.css?v=v1">
+<link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}?v=v1">
+<link defer rel="stylesheet" href="{{ '/assets/css/scholar-icons.css' | relative_url }}?v=v1">
 <link
   defer
   rel="stylesheet"
@@ -43,14 +43,14 @@
 <link
   defer
   rel="stylesheet"
-  href="{{ site.baseurl }}/assets/css/jekyll-pygments-themes-github.css?v=v1"
+  href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url }}?v=v1"
   media=""
   id="highlight_theme_light"
 >
 
 {% if page.toc and page.toc.sidebar %}
   <!-- Sidebar Table of Contents -->
-  <link defer href="{{ site.baseurl }}/assets/css/bootstrap-toc.min.css?v=v1" rel="stylesheet">
+  <link defer href="{{ '/assets/css/bootstrap-toc.min.css' | relative_url }}?v=v1" rel="stylesheet">
 {% endif %}
 
 <!-- Styles -->
@@ -74,7 +74,7 @@
 {% elsif site.icon != blank %}
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | prepend: site.baseurl }}?v=v1">
 {% endif %}
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css?v=v1">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=v1">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 {% if site.enable_darkmode %}
@@ -83,7 +83,7 @@
   <link
     defer
     rel="stylesheet"
-    href="{{ site.baseurl }}/assets/css/jekyll-pygments-themes-native.css?v=v1"
+    href="{{ '/assets/css/jekyll-pygments-themes-native.css' | relative_url }}?v=v1"
     media="none"
     id="highlight_theme_dark"
   >
@@ -193,7 +193,7 @@
 {% endif %}
 
 {% if page.tikzjax %}
-  <link defer rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/tikzjax.min.css?v=v1">
+  <link defer rel="stylesheet" type="text/css" href="{{ '/assets/css/tikzjax.min.css' | relative_url }}?v=v1">
 {% endif %}
 
 {% if site.enable_cookie_consent %}
